@@ -13,6 +13,19 @@ has_footer: true
     <link rel="manifest" href="/manifest.webmanifest">
 
     <title>{{ title }}</title>
+    <meta name="author" content="Minimalist Apps">
+    <meta name="title" content="{{ title }}">
+    <meta name="description" content="{{ info.description }}">
+    <meta name="generator" content="eleventy">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="{{ info.url }}">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:title" content="{{ title }}">
+    <meta property="og:description" content="{{ info.description }}">
+    <meta property="og:image" content="{{ info.image_url }}">
+    <meta property="og:image:alt" content="Minimalist Apps">
+
     <link rel="stylesheet" href="/bundle.css">
   </head>
   <body a="auto">

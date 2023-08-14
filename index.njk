@@ -22,13 +22,15 @@ title: Minimalist Apps
 </p>
 <hr data-content=" Our Apps "/>
 <ul>
-  <li>Smart CSV: CSV File Viewer</li>
-  <ul>
-    <li>More than a Csv File Viewer, you can generate PDF, create chart and even using SQL query to query your data.</li>
-    <li>
-      <span>Download</span>
-      <a href='https://play.google.com/store/apps/details?id=xyz.minimalistapps.smartcsv'>Android</a>
-      <a href='https://apps.apple.com/us/app/smart-csv-viewer-smart-tables/id1611962123'>iOS</a>
-    </li>
-  </ul>
+  {% for app in apps %}
+    <li>{{ app.name }}</li>
+    <ul>
+      <li>{{ app.description }}</li>
+      <li>
+        <span>Download</span>
+        <a href='https://play.google.com/store/apps/details?id=xyz.minimalistapps.smartcsv'>Android</a>
+        <a href='https://apps.apple.com/us/app/smart-csv-viewer-smart-tables/id1611962123'>iOS</a>
+      </li>
+    </ul>
+  {% endfor %}
 </ul>
