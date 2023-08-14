@@ -21,16 +21,12 @@ title: Minimalist Apps
           Email: <a href="mailto:imuosdev@gmail.com">imuosdev@gmail.com</a>
 </p>
 <hr data-content=" Our Apps "/>
-<ul>
-  {% for app in apps %}
-    <li>{{ app.name }}</li>
-    <ul>
-      <li>{{ app.description }}</li>
-      <li>
-        <span>Download</span>
-        <a href='https://play.google.com/store/apps/details?id=xyz.minimalistapps.smartcsv'>Android</a>
-        <a href='https://apps.apple.com/us/app/smart-csv-viewer-smart-tables/id1611962123'>iOS</a>
-      </li>
-    </ul>
-  {% endfor %}
-</ul>
+{% for app in apps %}
+  <h2>{{ app.name }}</h2>
+  <p>{{ app.description }}</p>
+  <p>
+    <span>Download</span>
+    <a href='https://play.google.com/store/apps/details?id=xyz.minimalistapps.smartcsv'>Android</a>
+    <a href='https://apps.apple.com/us/app/smart-csv-viewer-smart-tables/id1611962123'>iOS</a>
+  </p>
+{% endfor %}
