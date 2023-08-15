@@ -5,28 +5,37 @@ title: Minimalist Apps
 <h1>Minimalist Apps</h1>
 
 <p>
-          We are husband and wife, we are here to make mobile apps to share with everyone.
-          My husband with long years of experience in mobile development and I am a freelance writer.
-          Childbearing soon after marriage, and a busy life makes us understand the meaning of simple but productive things.
-          That is the reason for <b>
-    <i>/minimalist/ - less is more</i>
-  </b> born.
-        </p>
+  As a husband-wife duo, we craft mobile apps for all to enjoy.
+  With his extensive mobile development background and my freelance writing expertise, 
+  we're a unique blend. Early parenthood and a bustling life taught us the value of
+  simplicity and productivity – the inspiration behind our minimalist approach.  
+</p>
 <p>
-          We are trying to create app products that save your time, optimize your work processes and also reduce your expenses.
-          Hope you will enjoy our apps.
-          If you have any feedback, don't hesitate to contact us.
-        </p>
+  Our mission? Crafting apps that streamline tasks, enhance efficiency, and cut costs.
+  We hope you relish our offerings. Your feedback matters, so reach out anytime.
+</p>
 <p>
           Email: <a href="mailto:imuosdev@gmail.com">imuosdev@gmail.com</a>
 </p>
 <hr data-content=" Our Apps "/>
 {% for app in apps %}
   <h2>{{ app.name }}</h2>
-  <p>{{ app.description }}</p>
+  <details>
+    <summary>{{ app.summary }}</summary>
+    {% for msg in app.description %}
+      <div>
+        {{ msg }}
+      </div>
+    {% endfor %}
+  </details>
   <p>
     <span>Download</span>
-    <a href='https://play.google.com/store/apps/details?id=xyz.minimalistapps.smartcsv'>Android</a>
-    <a href='https://apps.apple.com/us/app/smart-csv-viewer-smart-tables/id1611962123'>iOS</a>
+    {% if app.android %}
+      <a href='{{ app.android }}'>Android</a>
+    {% endif %}
+
+    {% if app.ios %}
+      <a href='{{ app.ios }}'>iOS</a>
+    {% endif %}
   </p>
 {% endfor %}
