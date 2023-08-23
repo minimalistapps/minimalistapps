@@ -27,7 +27,8 @@ title: Minimalist Apps
         {{ msg }}
       </div>
     {% endfor %}
-  </details>
+  </details>  
+  
   <p>
     <span>Download</span>
     {% if app.android %}
@@ -38,4 +39,7 @@ title: Minimalist Apps
       <a href='{{ app.ios }}'>iOS</a>
     {% endif %}
   </p>
+  {% if app.docs %}
+      <a href='{{ app.docs }}' target="_blank">Learn more</a>
+  {% endif %}
 {% endfor %}

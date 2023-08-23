@@ -13,6 +13,7 @@ module.exports = [
       "- Copy the selected rows.",
       "- and more.",
     ],
+    docs: "https://minimalistapps.github.io/smartcsv/",
     android: "https://play.google.com/store/apps/details?id=xyz.minimalistapps.smartcsv",
     ios: "https://apps.apple.com/us/app/smart-csv-viewer-smart-tables/id1611962123"
   },
